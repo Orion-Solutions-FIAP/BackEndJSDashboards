@@ -1,0 +1,20 @@
+body{
+    height: 100vh;
+}
+
+header .logo{
+    background-color: #d1d1d1;
+    border: 1px solid #660e80;
+}
+
+header .imgLogo {
+    width: 130px;
+    height: 50px;
+    object-position: center;
+}
+
+
+footer{
+    background-color: #d1d1d1;
+    height: auto;
+}

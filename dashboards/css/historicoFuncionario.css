@@ -1,0 +1,70 @@
+header .back{
+    transform: scaleX(-1);
+    width: 2em;
+    height: 2em;
+}
+
+.taskData{
+    background-color: #d1d1d1;
+    border: 1px solid #660e80;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+}
+
+.taskStatus{
+    background-color: #16ad16;
+    border: 0px solid;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+}
+
+.descTask{
+    padding: 0 1rem 0 1rem;
+    max-width: 50vw;
+}
+
+.points{
+    border: 1px solid #660e80;
+    background-color: #575757;
+    color: white;
+    float: left;
+}
+
+@media (max-width: 1320px) {
+
+    h4{
+        font-size: 1em;
+    }
+    p{
+        font-size: 0.7em;
+    }
+    .imageToggler{
+        width: 1em;
+        height: 0.5em;
+    }
+}
+
+@media (max-width: 900px) {
+    .points{
+        font-size: 0.5em;
+    }
+}
+
+@media (max-width: 660px) {
+    h4{
+        font-size: 0.8em;
+    }
+    p{
+        font-size: 0.6em;
+    }
+}
+
+@media (max-width: 400px) {
+    h4{
+        font-size: 0.5em;
+    }
+    p{
+        font-size: 0.3em;
+    }
+}

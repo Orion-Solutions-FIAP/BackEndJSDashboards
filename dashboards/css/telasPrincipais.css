@@ -1,0 +1,46 @@
+.icons{
+    display: inline;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.borda-estilo{
+    border-color: #660e80;
+}
+
+.card-usuario{
+    max-width:540px;
+}
+
+.card-imagem-posicao{
+    object-fit: cover;
+    height: 200px;
+
+}
+
+.card-formatacao-horizontal{
+    max-width:60rem;
+}
+
+.card-formatacao{
+    max-width:18rem;
+}
+
+.botao-estilo{
+    background-color: #d1d1d1;
+    color:black
+}
+
+.status-estilo{
+    border:1px solid #660e80;
+    border-radius: 5px;
+}
+
+.texto-estilo{
+    font-size: 1.5rem;
+}
+
+.medalha-tamanho{
+    width:60%;
+    height: 60%;
+}

@@ -1,0 +1,18 @@
+header .back{
+    transform: scaleX(-1);
+    width: 2em;
+    height: 2em;
+}
+
+.borda-imagem{
+    border: 1px solid  #440960;
+}
+
+.botao-estilo{
+    background-color: #d1d1d1;
+    color:black
+}
+
+.card-imagem{
+    width: 40rem;
+}

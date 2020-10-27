@@ -1,0 +1,114 @@
+.dash{
+    background-color: #d1d1d1;
+    border: 1px #660e80 solid;
+    border-radius: 5px;
+    height: 40em;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+
+}
+
+.p-dash{
+margin-left: 10%;
+margin-top: 2%;
+}
+
+.mes{
+margin-bottom: 1.2em;
+}
+
+img{
+width: 30px;
+height: 30px;
+}
+
+.dashPrincipal{
+border: 1px #660e80 solid;
+border-radius: 5px;
+height: 40em;
+background-color: #eee;
+}
+footer{
+margin-top: 20px;
+}
+
+.pointsEmployee{
+height: 53vh; 
+width: 100px; 
+margin: 15px;
+}
+
+.pointsEmployee p:not(:first-child){
+margin-top: 77px;
+}
+.content{
+padding-left: 15%;
+padding-top: 5%;
+}
+
+.input{
+padding:10px;
+}
+
+.medals{
+    width:60%;
+    height: 60%;
+}
+
+
+.graph{
+padding:10px;
+}
+
+.dashBoard{
+width:80%;
+height:600px;
+border-style: solid;
+border-color:#440960;
+border-width: 4px;
+border-radius:3px;
+}
+
+@media (max-width: 1362px) {
+.pointsEmployee{
+    height: 52vh; 
+    width: 100px; 
+    margin: 15px;
+}
+html{
+    font-size: 14px;
+}
+}
+
+@media (max-width: 1172px) {
+.pointsEmployee{
+    height: 48vh; 
+    width: 50px; 
+    margin: 15px;
+}
+html{
+    font-size: 12px;
+}
+}
+
+@media (max-width: 962px) {
+.pointsEmployee{
+    height: 38vh; 
+    width: 50px; 
+    margin: 15px;
+}
+html{
+    font-size: 10px;
+}
+}
+
+@media (max-width: 885px) {
+.pointsEmployee{
+    height: 30vh; 
+    width: 50px; 
+    margin: 15px;
+}
+html{
+    font-size: 8px;
+}
+}

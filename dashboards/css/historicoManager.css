@@ -1,0 +1,33 @@
+header .back{
+    transform: scaleX(-1);
+    width: 2em;
+    height: 2em;
+}
+
+.savedTask{
+    background-color: #d1d1d1;
+    border: 1px #660e80 solid;
+    border-radius: 5px;
+}
+
+.taskStatus{
+    border: 0px solid;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    padding: 1px;;
+}
+
+@media (max-width: 1320px) {
+    h3{
+        font-size: 1em;
+    }
+    p{
+        font-size: 0.6em;
+    }
+    .imageToggler{
+        width: 1.5em;
+        height: 1em;
+    }
+}
+

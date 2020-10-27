@@ -1,0 +1,43 @@
+header div.logo{
+    background-color: #d1d1d1;
+    border-top: 2px solid #660e80;
+    border-bottom: 2px solid #660e80;
+}
+
+.ajusteLogin{
+    height: 80vh;
+}
+
+.sectionForm form fieldset{
+    border: 1px solid#660e80;
+    background-color: #d1d1d1;
+}
+
+.sectionForm form fieldset legend{
+    text-align: center;
+}
+
+.sectionForm form fieldset .inputContainer{
+    padding: 2rem 2rem 0 2rem;
+}
+
+.sectionForm form fieldset .inputContainer a{
+    color: black;
+}
+.pCadFun{
+    font-size: 28px; 
+    margin-left: 22%; 
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+header div .imgLogo {
+    width: 17vw;
+    height: 14vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+.buttonSubmit{
+    padding: 1.5rem;
+}
+
