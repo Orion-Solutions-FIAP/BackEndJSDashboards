@@ -3,6 +3,9 @@ import {Connection, createConnection, getConnection} from "typeorm";
 import * as moment from 'moment'
 import express = require('express');
 let app = express();
+var cors = require('cors')
+
+app.use(cors())
 
 createConnection({
   type: "oracle",
@@ -11,20 +14,40 @@ createConnection({
   password: "271193"
 }).then(async connection => {
 
-  app.get('/dashBoardCompany',async (req,res)=>{
-    let { userName } = req.body;
+  app.get('/dashBoardFunc',async (req,res)=>{
+    //let { userName } = req.body;
     let activityBydate = await connection.query('select  count(1), dt_FIM from T_OPS_FUNC_TAREFA where CD_CONTA_FUNC = 21 group by dt_FIM');
     let arrayDash = activityBydate.map(activity=>{
-      return [activity['COUNT(1)'],moment(activity['DT_FIM']).format('MMM-DD').toString()]
+      return [moment(activity['DT_FIM']).format('MMM-DD').toString(),activity['COUNT(1)']]
+    })
+    res.json({result:[['Data', 'Sales']].concat(arrayDash)})
+  })
+
+  app.get('/dashBoardFunc/:employee',async (req,res)=>{
+    console.log(req.params['employee']);
+    //let { userName } = req.body;
+    
+    let activityBydate = await connection.query(`select count(1),DT_FIM from T_OPS_FUNC_TAREFA where CD_CONTA_FUNC = (select CD_CONTA from T_OPS_FUNCIONARIO where NM_FUNC like '%${req.params['employee']}%') and cd_status = 3 group by DT_FIM`);
+    let arrayDash = activityBydate.map(activity=>{
+      return [moment(activity['DT_FIM']).format('MMM-DD').toString(),activity['COUNT(1)']]
+    })
+    res.json({result:[['Data', 'Sales']].concat(arrayDash)})
+  })
+
+  app.get('/dashBoardPermormance',async (req,res)=>{
+    //let { userName, team} = req.body;
+    let activityBydate = await connection.query('select  count(1), dt_FIM from T_OPS_FUNC_TAREFA where cd_status = 3 group by dt_FIM');
+    let arrayDash = activityBydate.map(activity=>{
+      return [moment(activity['DT_FIM']).format('MMM-DD').toString(),activity['COUNT(1)']]
     })
     res.json({result:arrayDash})
   })
 
-  app.get('/dashBoardPermormance',async (req,res)=>{
-    let { userName, team} = req.body;
-    let activityBydate = await connection.query('select  count(1), dt_FIM from T_OPS_FUNC_TAREFA where CD_CONTA_FUNC = 21 group by dt_FIM');
+  app.get('/dashBoardPermormance/:company',async (req,res)=>{
+    //let { userName, team} = req.body;
+    let activityBydate = await connection.query('select  count(1), dt_FIM from T_OPS_FUNC_TAREFA where cd_status = 3 group by dt_FIM');
     let arrayDash = activityBydate.map(activity=>{
-      return [activity['COUNT(1)'],moment(activity['DT_FIM']).format('MMM-DD').toString()]
+      return [moment(activity['DT_FIM']).format('MMM-DD').toString(),activity['COUNT(1)']]
     })
     res.json({result:arrayDash})
   })

@@ -3,12 +3,8 @@
 <html lang="pt-br">
 <head>
 <link rel="stylesheet" href="css/dashboardCompany.css">
-<script type="text/javascript"
-	src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript" src="dashboardCompany.js"></script>
-<script type="text/javascript" src="dashboardCompany2.js"></script>
 </head>
-<body onresize="reload()">
+<body >
 	<header>
 		<nav class="logo navbar navbar bg">
 			<a href="#" class="navbar-brand"> <img class="imgLogo "
@@ -24,19 +20,13 @@
 			<div
 				class="mr-4 selectGroup form-group col-lg-2 col-sm-3 col-xs-2 col-xl-2">
 				<label for="employee">Funcionario</label> <select
-					class="form-control col-lg-12" name="employee" id="employee">
-					<option value="">Whindersson Nunes</option>
-					<option value="">Vit�o</option>
-					<option value="">Luiza Sonza</option>
+					class="form-control col-lg-12" name="employee" onChange="myNewFunction(this)" id="employee">
 				</select>
 			</div>
 			<div
 				class="mr-4 selectGroup teams form-group col-lg-2 col-sm-3 col-xs-2 col-xl-2 ">
 				<label for="team">Time</label> <select
 					class="form-control col-lg-12" name="team" id="team">
-					<option value="">Whindersson Nunes</option>
-					<option value="">Vit�o</option>
-					<option value="">Luiza Sonza</option>
 				</select>
 			</div>
 		</div>
@@ -100,3 +90,7 @@
 	<script src="dashboardCompany.js"></script>
 </body>
 </html>
+<script type="text/javascript"
+	src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="dashboardCompany.js"></script>
+<script type="text/javascript" src="dashboardCompany2.js"></script>
